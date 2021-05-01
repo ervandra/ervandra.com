@@ -86,140 +86,142 @@ export default function Home() {
             <div className="container">
               <div className="row">
                 <div className="col">
-                  <div className="row justify-content-center">
-                    <div className="col-12 col-md-10">
-                      <h1 className="text-center mb-4 display-2 fw-bold text-primary lh-sm">
-                        <strong className="highlight text-primary">2021 Update!</strong> Upgrade{' '}
-                        <strong>Your First (or Next) Website</strong> into{' '}
-                        <strong>Sales Funnel..</strong>{' '}
-                        <strong>
-                          <u>Today!</u>
-                        </strong>
-                      </h1>
-                      <h3 className="text-center text-danger">
-                        <em>
-                          Trusted by 19+ companies from Indonesia, Singapore, US, and Finland!
-                        </em>
-                      </h3>
-                    </div>
-                  </div>
-                  <div className="hero-image text-center mb-5">
-                    <Image
-                      src="/images/hero-showcase.png"
-                      alt="Showcase"
-                      layout="responsive"
-                      width="1447"
-                      height="682"
-                    />
-                  </div>
-                  <div className="row justify-content-center">
-                    <div className="col-12 col-md-8">
-                      <div className="sponsors mb-5 text-center">
-                        <Image
-                          src="/images/sponsors.png"
-                          alt="Sponsored"
-                          width="1200"
-                          height="75"
-                          layout="responsive"
-                          className="img-grayscale"
-                        />
+                  <div className="py-3 py-md-5">
+                    <div className="row justify-content-center">
+                      <div className="col-12">
+                        <h1 className="text-center mb-4 display-3 fw-bold  lh-sm">
+                          <strong className="highlight ">2021 Update!</strong> Upgrade{' '}
+                          <strong>Your First (or Next) Website</strong> into{' '}
+                          <strong>Sales Funnel..</strong>{' '}
+                          <strong>
+                            <u>Today!</u>
+                          </strong>
+                        </h1>
+                        <h3 className="text-center text-danger">
+                          <em>
+                            Trusted by 19+ companies from Indonesia, Singapore, US, and Finland!
+                          </em>
+                        </h3>
                       </div>
-                      <h5 className="text-center mb-5 text-muted">
-                        For 10+ years building <strong>website</strong> for{' '}
-                        <strong>companies</strong> and <strong>clients</strong> (
-                        <em>just like you</em>), we have found that <strong>Sales Funnel</strong> is
-                        the principal key to <strong>generate</strong> more{' '}
-                        <strong>profits for all of businesses!</strong>
-                      </h5>
                     </div>
-                  </div>
-
-                  <div className="button-container text-center">
-                    <button
-                      className="btn btn-success btn-lg shadow-lg fw-bold p-3 px-5 text-uppercase text-light fs-3"
-                      onClick={() => setState({ isOpen: true })}>
-                      Claim Your Free Strategy Call
-                    </button>
-                  </div>
-                  <Modal
-                    isOpen={isOpen}
-                    onRequestClose={() => setState({ isOpen: false })}
-                    contentLabel="Modal"
-                    className="reveal p-3 center small"
-                    ariaHideApp={false}>
-                    <div className="p-3">
-                      {success ? (
-                        <div className="p-0 text-center">
-                          <h3 className="mb-3">Success</h3>
-                          <button className="btn btn-primary">Close</button>
+                    <div className="hero-image text-center mb-5">
+                      <Image
+                        src="/images/hero-showcase.png"
+                        alt="Showcase"
+                        layout="responsive"
+                        width="1447"
+                        height="682"
+                      />
+                    </div>
+                    <div className="row justify-content-center">
+                      <div className="col-12 col-md-8">
+                        <div className="sponsors mb-5 text-center">
+                          <Image
+                            src="/images/sponsors.png"
+                            alt="Sponsored"
+                            width="1200"
+                            height="75"
+                            layout="responsive"
+                            className="img-grayscale"
+                          />
                         </div>
-                      ) : (
-                        <form onSubmit={handleSubmit} className="px-0 px-md-3">
-                          <h3 className="text-center mb-3 fw-bold">
-                            Fill out form below and{' '}
-                            <strong className="text-success">
-                              Claim Your Free Strategy Session
-                            </strong>{' '}
-                            Now.
-                          </h3>
-                          <div className="form-group mb-3">
-                            <input
-                              type="text"
-                              className="form-control form-control-lg"
-                              placeholder="Your Name:"
-                              value={name}
-                              disabled={isLoading}
-                              onChange={e => setState({ name: e.target.value })}
-                            />
-                          </div>
-                          <div className="form-group mb-4">
-                            <input
-                              type="email"
-                              className="form-control form-control-lg"
-                              placeholder="Your Email:"
-                              required
-                              disabled={isLoading}
-                              value={email}
-                              onChange={e => setState({ email: e.target.value })}
-                            />
-                          </div>
-                          {isLoading ? (
-                            <button
-                              type="button"
-                              className="btn btn-lg btn-secondary text-uppercase fw-bold shadow w-100 text-light">
-                              Submitting..
-                            </button>
-                          ) : (
-                            <button
-                              type="submit"
-                              className="btn btn-lg btn-success text-uppercase fw-bold shadow w-100 text-light">
-                              Claim Free Strategy
-                            </button>
-                          )}
-                          <p className="mb-0 text-muted text-center mt-4">
-                            Your privacy is protected
-                          </p>
-                        </form>
-                      )}
+                        <h5 className="text-center mb-5">
+                          For 10+ years building <strong>website</strong> for{' '}
+                          <strong>companies</strong> and <strong>clients</strong> (
+                          <em>just like you</em>), we have found that <strong>Sales Funnel</strong>{' '}
+                          is the principal key to <strong>generate</strong> more{' '}
+                          <strong>profits for all of businesses!</strong>
+                        </h5>
+                      </div>
                     </div>
 
-                    <button
-                      className="btn btn-close close-reveal"
-                      onClick={() => setState({ isOpen: false })}>
-                      &times;
-                    </button>
-                  </Modal>
+                    <div className="button-container text-center">
+                      <button
+                        className="btn btn-primary btn-lg shadow-lg border-3 fw-bold p-3 px-5 text-uppercase fs-3"
+                        onClick={() => setState({ isOpen: true })}>
+                        Claim Your Free Strategy Call
+                      </button>
+                    </div>
+                    <Modal
+                      isOpen={isOpen}
+                      onRequestClose={() => setState({ isOpen: false })}
+                      contentLabel="Modal"
+                      className="reveal p-3 center small"
+                      ariaHideApp={false}>
+                      <div className="p-3">
+                        {success ? (
+                          <div className="p-0 text-center">
+                            <h3 className="mb-3">Success</h3>
+                            <button className="btn btn-primary">Close</button>
+                          </div>
+                        ) : (
+                          <form onSubmit={handleSubmit} className="px-0 px-md-3">
+                            <h3 className="text-center mb-3 fw-bold">
+                              Fill out form below and{' '}
+                              <strong className="text-success">
+                                Claim Your Free Strategy Session
+                              </strong>{' '}
+                              Now.
+                            </h3>
+                            <div className="form-group mb-3">
+                              <input
+                                type="text"
+                                className="form-control form-control-lg"
+                                placeholder="Your Name:"
+                                value={name}
+                                disabled={isLoading}
+                                onChange={e => setState({ name: e.target.value })}
+                              />
+                            </div>
+                            <div className="form-group mb-4">
+                              <input
+                                type="email"
+                                className="form-control form-control-lg"
+                                placeholder="Your Email:"
+                                required
+                                disabled={isLoading}
+                                value={email}
+                                onChange={e => setState({ email: e.target.value })}
+                              />
+                            </div>
+                            {isLoading ? (
+                              <button
+                                type="button"
+                                className="btn btn-lg btn-secondary text-uppercase fw-bold shadow w-100 text-light">
+                                Submitting..
+                              </button>
+                            ) : (
+                              <button
+                                type="submit"
+                                className="btn btn-lg btn-success text-uppercase fw-bold shadow w-100 text-light">
+                                Claim Free Strategy
+                              </button>
+                            )}
+                            <p className="mb-0 text-muted text-center mt-4">
+                              Your privacy is protected
+                            </p>
+                          </form>
+                        )}
+                      </div>
+
+                      <button
+                        className="btn btn-close close-reveal"
+                        onClick={() => setState({ isOpen: false })}>
+                        &times;
+                      </button>
+                    </Modal>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="top-testimony" className="py-5 bg-white bg-gradient shadow">
+          <div id="top-testimony" className="py-5  bg-gradient shadow-inset">
             <div className="container">
-              <div className="row align-items-center">
+              <div className="row align-items-center justify-content-center">
                 <div className="col-12 col-md-auto">
-                  <div className="d-flex align-items-center mb-3">
+                  <div className="align-items-center mb-3 text-center">
                     <div
-                      className="img-thumbnail rounded-circle me-2"
+                      className="img-thumbnail rounded-circle mb-2 d-inline-block"
                       style={{ width: '90px', height: '90px' }}>
                       <Image
                         src="/images/jussi-hurmola.jpg"
@@ -231,35 +233,40 @@ export default function Home() {
                       />
                     </div>
                     <div className="testimony-header">
-                      <h6 className="text-primary fw-bold text-uppercase">Jussi Hurmola</h6>
-                      <h6 className="mb-0 text-muted small">CEO & Founder Lifelearn Platform</h6>
+                      <h6 className="mb-0 fw-bold text-uppercase">Jussi Hurmola</h6>
+                      <h6 className="mb-0 small">CEO & Founder Lifelearn Platform</h6>
                     </div>
                   </div>
                 </div>
                 <div className="col-12 col-md-auto">
-                  <div className="testimony-content text-muted p-3 bg-light bg-gradient rounded shadow border border-2 mb-0">
-                    <p>
-                      We decided to trust Ervan for his crazy strategies, and we never regret it!
-                    </p>
-                    <p className="mb-0">
-                      I never thought sales funnel strategy could grow my new business in just
-                      several months
+                  <div className="testimony-content p-3 bg-gradient rounded-pill px-4 shadow-lg mb-0 position-relative">
+                    <span
+                      className="position-absolute h1 text-danger"
+                      style={{ top: '-.5rem', left: '.5rem' }}>
+                      &ldquo;
+                    </span>
+                    <p className="mb-0 fw-bold">
+                      <em>
+                        We decided to trust Ervan for his crazy strategies, and we never regret it!
+                        <br />I never thought sales funnel strategy could grow my new business in
+                        just several months
+                      </em>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="what-you-get" className="py-5 bg-light">
+          <div id="what-you-get" className="py-5">
             <div className="container">
               <div className="row">
                 <div className="col">
                   <div className="py-3 py-md-5">
-                    <h2 className="mb-3 text-primary">
+                    <h2 className="mb-3 ">
                       What You'll <strong>GET</strong> During This{' '}
                       <strong>Free Strategy Session</strong>
                     </h2>
-                    <p className="mb-5 fs-5 text-muted">
+                    <p className="mb-5 fs-5">
                       I understand that both of our <strong>time</strong> are very{' '}
                       <strong>valuable</strong>, so i wouldn't waste any of your time as mine also
                       precious.
@@ -267,10 +274,10 @@ export default function Home() {
                       will help you to realize that your business need a better{' '}
                       <strong>sales funnel</strong>:
                     </p>
-                    <div id="easy-steps" className="py-3 text-muted">
+                    <div id="easy-steps" className="py-3">
                       <div className="row">
                         <div className="col-12 col-md-4">
-                          <h3 className="mb-3 fw-bold fs-4 text-primary border-bottom pb-3 border-2 border-success">
+                          <h3 className="mb-3 fw-bold fs-4  border-bottom pb-3 border-2 border-success">
                             1️⃣ Preparation
                           </h3>
                           <p>
@@ -280,7 +287,7 @@ export default function Home() {
                           </p>
                         </div>
                         <div className="col-12 col-md-4">
-                          <h3 className="mb-3 fw-bold fs-4 text-primary border-bottom pb-3 border-2 border-success">
+                          <h3 className="mb-3 fw-bold fs-4  border-bottom pb-3 border-2 border-success">
                             2️⃣ Consultation
                           </h3>
                           <p>
@@ -290,7 +297,7 @@ export default function Home() {
                           </p>
                         </div>
                         <div className="col-12 col-md-4">
-                          <h3 className="mb-3 fw-bold fs-4 text-primary border-bottom pb-3 border-2 border-success">
+                          <h3 className="mb-3 fw-bold fs-4  border-bottom pb-3 border-2 border-success">
                             3️⃣ Complete Review
                           </h3>
                           <p>
@@ -307,7 +314,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div id="about-ervan" className="py-5 bg-gradient bg-primary shadow-lg">
+          <div id="about-ervan" className="py-5 shadow-lg" style={{ background: 'rgba(0,0,0,.9)' }}>
             <div className="container">
               <div className="row">
                 <div className="col">
