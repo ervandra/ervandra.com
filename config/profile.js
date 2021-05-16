@@ -1,7 +1,7 @@
 const profile = {
   name: 'Ervandra Halim',
-  title: 'Senior Software Engineer',
-  email: 'ervandra.halim@gmail.com',
+  title: 'IT Consultant',
+  email: 'hi@ervandra.com',
   phone: '+6287708770800',
   photo: 'https://www.ervandra.com/wp-content/uploads/2020/12/ervan-round.png',
   about:

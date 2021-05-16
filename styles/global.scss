@@ -1,9 +1,11 @@
 $enable-shadows: true;
-$primary: #384d79;
-$danger: #fb6970;
-$success: #52a377;
-$warning: #f2ad06;
+$primary: #1f4662;
+$danger: #ff647f;
+$success: #a5ff90;
+$warning: #ffc600;
+$border-radius: 0.5em;
 $enable-responsive-font-sizes: true;
+$border-radius-lg: 1em;
 
 @import "bootstrap/scss/bootstrap.scss";
 
