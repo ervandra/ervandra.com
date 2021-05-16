@@ -41,42 +41,46 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>
-          {profile.name} - {profile.title}
-        </title>
+        <title>Ervandra (IT Consultant): Claim Your Free Strategy Now!</title>
+        <meta
+          name="description"
+          content="A one hour 1-on-1 IT consultation with Ervandra Halim to help your business with technical requirements to drive traffic, conversion and sales. Book your strategy session now."
+        />
         <meta name="author" content={profile.name} />
         <meta name="twitter:card" content="summary" key="twcard" />
         <meta name="twitter:creator" content="@ervandracom" key="twhandle" />
-        <meta
-          property="og:image"
-          content={
-            profile.cover !== ''
-              ? profile.cover
-              : `https://via.placeholder.com/1200x628/${profile.color}/FFFFFF?text=Resume:+${profile.name}+-+${profile.title}`
-          }
-          key="ogimage"
-        />
-        <meta
-          property="og:site_name"
-          content={`${profile.name} - ${profile.title}`}
-          key="ogsitename"
-        />
+        <meta property="og:image" content="/images/cover.jpg" key="ogimage" />
+        <meta property="og:site_name" content={`${profile.name}`} key="ogsitename" />
         <meta
           property="og:title"
-          content={`Resume: ${profile.name} - ${profile.title}`}
+          content={`Ervandra (IT Consultant): Claim Your Free Strategy Now!`}
           key="ogtitle"
         />
-        <meta property="og:description" content={profile.about} key="ogdesc" />
+        <meta
+          property="og:description"
+          content="A one hour 1-on-1 IT consultation with Ervandra Halim to help your business with technical requirements to drive traffic, conversion and sales. Book your strategy session now."
+          key="ogdesc"
+        />
       </Head>
       <div id="app-container">
-        <div id="top" className="top-bar bg-dark py-2 shadow-sm">
-          <div className="container">
+        <div
+          id="top"
+          className="top-bar py-2 shadow-lg sticky-top"
+          style={{ background: '#1f4662cc', backdropFilter: 'blur(5px)' }}>
+          <div className="container-fluid">
             <div className="row">
-              <div className="col">
-                <h6 className="m-0 text-center text-light">
-                  <strong className="text-warning">Attention</strong>&nbsp; Small Business Owners,
-                  CEO(s), Entrepreneurs, Consultants
-                </h6>
+              <div className="col-12">
+                <div className="d-flex align-items-center justify-content-center">
+                  <h6 className="m-0 text-center text-light small me-3">
+                    <strong className="text-warning">⚡️&nbsp; Attention</strong>&nbsp; Small
+                    Business Owners, CEO(s), Entrepreneurs, Consultants
+                  </h6>
+                  <button
+                    className="d-none d-md-block btn btn-warning small rounded-3 btn-sm py-1"
+                    onClick={() => setState({ isOpen: true })}>
+                    Claim Free Strategy
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -98,7 +102,7 @@ export default function Home() {
                               <u>Today!</u>
                             </strong>
                           </h1>
-                          <h2 className="text-center text-danger fs-4">
+                          <h2 className="text-center text-danger fs-5">
                             <em>
                               Trusted by 19+ companies from Indonesia, Singapore, US, and Finland!
                             </em>
@@ -126,7 +130,7 @@ export default function Home() {
                               className="img-grayscale"
                             />
                           </div>
-                          <h5 className="text-center mb-5">
+                          <h5 className="text-center mb-5 fs-6">
                             For 10+ years building <strong>website</strong> for{' '}
                             <strong>companies</strong> and <strong>clients</strong> (
                             <em>just like you</em>), we have found that{' '}
@@ -137,11 +141,21 @@ export default function Home() {
                         </div>
                       </div>
 
+                      <div
+                        className="mb-2 text-center d-none d-md-block"
+                        style={{ marginTop: '-2em' }}>
+                        <Image
+                          src="/images/arrow-bottom-2.svg"
+                          width="100"
+                          height="100"
+                          layout="fixed"
+                        />
+                      </div>
                       <div className="button-container text-center">
                         <button
-                          className="btn btn-primary btn-lg shadow-lg border-3 fw-bold p-3 px-5 text-uppercase fs-3"
+                          className="btn btn-primary btn-lg shadow-lg border-3 fw-bold p-3 px-5 text-uppercase"
                           onClick={() => setState({ isOpen: true })}>
-                          Claim Your Free Strategy Call
+                          ✅ Claim Your Free Strategy Call
                         </button>
                       </div>
                       <Modal
@@ -196,7 +210,7 @@ export default function Home() {
                                 <button
                                   type="submit"
                                   className="btn btn-lg btn-primary text-uppercase fw-bold shadow w-100">
-                                  Claim Free Strategy
+                                  ✅ Claim Free Strategy
                                 </button>
                               )}
                               <p className="mb-0 text-muted text-center mt-4">
@@ -243,7 +257,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-12 col-md-auto">
-                    <div className="testimony-content p-3 bg-gradient rounded-pill px-4 shadow-lg mb-0 position-relative">
+                    <div className="testimony-content p-3 bg-gradient rounded-3 px-4 shadow-lg mb-0 position-relative">
                       <span
                         className="position-absolute h1 text-danger"
                         style={{ top: '-.5rem', left: '.5rem' }}>
@@ -263,47 +277,96 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div id="what-you-get" className="py-3 py-md-5">
+          <div id="what-you-get" className="py-3 py-md-5 bg-crown-light">
             <div className="py-3 py-md-5">
               <div className="container">
                 <div className="row">
                   <div className="col">
                     <div className="py-3 py-md-5">
-                      <h2 className="mb-3 ">
-                        What You'll <strong>GET</strong> During This{' '}
-                        <strong>Free Strategy Session</strong>
-                      </h2>
-                      <p className="mb-5 fs-5">
-                        I understand that both of our <strong>time</strong> are very{' '}
-                        <strong>valuable</strong>, so i wouldn't waste any of your time as mine also
-                        precious.
-                        <br />I will break down our call into these <strong>
-                          3-easy steps
-                        </strong>{' '}
-                        that will help you to realize that your business need a better{' '}
-                        <strong>sales funnel</strong>:
-                      </p>
-                      <div id="easy-steps" className="py-3">
+                      <div className="row align-items-center">
+                        <div className="col-12 col-md-3">
+                          <div className="text-center mb-3">
+                            <Image
+                              src="/images/strategy.svg"
+                              layout="intrinsic"
+                              width="200"
+                              height="200"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-12 col-md-9">
+                          <h2 className="mb-0 fs-5">
+                            What You'll <strong>GET</strong>
+                          </h2>
+                          <h3 className="mb-3 text-primary fs-2">
+                            During This <strong>Free Strategy Session</strong>
+                          </h3>
+                          <p className="mb-2">
+                            We understand that both of our <strong>time</strong> are very{' '}
+                            <strong>valuable</strong>, <br />
+                            so we wouldn't waste any of your time as ours also precious.
+                          </p>
+                          <p className="mb-3">
+                            We will break down our strategy call into these{' '}
+                            <strong>3-easy steps</strong> <br />
+                            that will help you to realize that your business need a better{' '}
+                            <strong>sales funnel</strong>:
+                          </p>
+                        </div>
+                      </div>
+                      <div id="easy-steps" className="py-3 pt-5">
                         <div className="row">
                           <div className="col-12 col-md-4">
-                            <h3 className="mb-3 fw-bold fs-4  border-bottom pb-3 border-2 border-primary text-primary">
+                            <h3 className="mb-3 fw-bold fs-4 d-flex align-items-center justify-content-between border-bottom pb-3 border-2 border-primary text-primary">
                               1️⃣ Preparation
+                              <span className="d-none d-md-block me-2">
+                                <Image
+                                  src="/images/arrow-right.svg"
+                                  width="100"
+                                  height="20"
+                                  layout="fixed"
+                                />
+                              </span>
                             </h3>
                             <p>
                               Before we're going on call, you can prepare your website information,
                               conversion rate, and business model as we're going through the deepest
                               factor of your business: your sales funnel.
                             </p>
+                            <span className="d-block d-md-none mb-2">
+                              <Image
+                                src="/images/arrow-bottom-2.svg"
+                                width="100"
+                                height="100"
+                                layout="fixed"
+                              />
+                            </span>
                           </div>
                           <div className="col-12 col-md-4">
-                            <h3 className="mb-3 fw-bold fs-4  border-bottom pb-3 border-2 border-primary text-primary">
+                            <h3 className="mb-3 fw-bold fs-4 d-flex justify-content-between align-items-center border-bottom pb-3 border-2 border-primary text-primary">
                               2️⃣ Consultation
+                              <span className="d-none d-md-block me-2">
+                                <Image
+                                  src="/images/arrow-right-2.svg"
+                                  width="100"
+                                  height="20"
+                                  layout="fixed"
+                                />
+                              </span>
                             </h3>
                             <p>
                               While we're on call, we will talk about your current situation and
                               your desired outcome that you want from us. I will help to simulate
                               your goals and insight within this call.
                             </p>
+                            <span className="d-block d-md-none mb-2">
+                              <Image
+                                src="/images/arrow-bottom-2.svg"
+                                width="100"
+                                height="100"
+                                layout="fixed"
+                              />
+                            </span>
                           </div>
                           <div className="col-12 col-md-4">
                             <h3 className="mb-3 fw-bold fs-4  border-bottom pb-3 border-2 border-primary text-primary">
@@ -315,8 +378,24 @@ export default function Home() {
                               case your website into brand new sales funnel that will generate
                               profits and grow your business to the next level.{' '}
                             </p>
+                            <div className="mb-0 text-start d-none d-md-block">
+                              <Image
+                                src="/images/arrow-bottom-3.svg"
+                                width="100"
+                                height="91"
+                                layout="fixed"
+                              />
+                            </div>
                           </div>
                         </div>
+                      </div>
+                      <div className="mb-3 d-none d-md-block">
+                        <Image
+                          src="/images/chart.svg"
+                          width="1584"
+                          height="396"
+                          layout="responsive"
+                        />
                       </div>
                     </div>
                   </div>
@@ -324,10 +403,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div
-            id="about-ervan"
-            className="py-3 py-md-5 bg-gradient"
-            style={{ background: 'rgba(0,0,0,.9)' }}>
+          <div id="about-ervan" className="py-3 py-md-5 bg-crown-dark">
             <div className="py-3 py-md-5">
               <div className="container">
                 <div className="row justify-content-center">
@@ -338,7 +414,7 @@ export default function Home() {
                           className="img-thumbnail d-inline-block rounded-circle shadow"
                           style={{ width: '120px', height: '120px' }}>
                           <Image
-                            src="/images/ervan.png"
+                            src="/images/ervan.jpg"
                             alt="Ervandra Halim"
                             className="rounded-circle"
                             width="110"
@@ -347,7 +423,10 @@ export default function Home() {
                           />
                         </div>
                       </div>
-                      <h2 className="mb-3">About Ervandra Halim</h2>
+                      <h2 className="mb-0 fs-6">About </h2>
+                      <h3 className="mb-3 fs-2">
+                        <strong>Ervandra Halim ⚡️</strong>
+                      </h3>
                       <p>
                         Ervan has helped his valuable partners and client across the globe for 10+
                         years in Website & Apps Development and Digital Marketing Strategies.
@@ -383,11 +462,19 @@ export default function Home() {
                 <div className="row justify-content-center">
                   <div className="col">
                     <div className="py-3 py-md-5">
-                      <h2 className="mb-5 text-center">
-                        Why'd They Recommend <br />
+                      <div className="text-center mb-3">
+                        <Image
+                          src="/images/emoji-pixie.png"
+                          layout="intrinsic"
+                          width="120"
+                          height="43"
+                        />
+                      </div>
+                      <h2 className="mb-0 text-center fs-5">Why'd They Recommend</h2>
+                      <h3 className="mb-5 fs-2 text-center text-primary">
                         <strong>Work With Ervan?</strong>
-                      </h2>
-                      <p className="fs-5 mb-5 text-center">
+                      </h3>
+                      <p className="mb-5 text-center">
                         My partner and valuable clients will tell you their experiences work with
                         me.
                       </p>
@@ -523,27 +610,48 @@ export default function Home() {
           </div>
 
           <div
-            id="footer"
+            id="bottom-content"
             className="bg-gradient py-3 py-md-5 border-0 mb-0"
             style={{ background: '#d2dae066 shadow-inset-lg' }}>
             <div className="py-3 py-md-5">
               <div className="container">
-                <div className="row justify-content-center">
+                <div className="row g-3 justify-content-center align-items-center">
+                  <div className="col-12 col-md-4">
+                    <div className="mb-3">
+                      <Image
+                        src="/images/showcase-bottom.png"
+                        layout="responsive"
+                        width="727"
+                        height="914"
+                      />
+                    </div>
+                  </div>
                   <div className="col-12 col-md-8">
-                    <h2 className="mb-5 text-center">
-                      What are you waiting for? Let’s Improve <strong>Your Business</strong> with{' '}
-                      <strong>Sales Funnel!</strong>
+                    <h2 className=" mb-0 fs-5 text-center text-md-start">
+                      What are you waiting for? Let’s Improve{' '}
                     </h2>
-                    <p className="fs-5 mb-5 text-center">
+                    <h3 className="fs-2 mb-3 text-primary text-center text-md-start">
+                      <strong>Your Business</strong> with{' '}
+                      <strong>
+                        <u>Sales Funnel!</u>
+                      </strong>
+                    </h3>
+                    <div className="alert my-3 alert-success shadow">
+                      <h6 className="mb-0">
+                        On <strong>June 2021</strong>, i have <strong>1</strong> available slot for
+                        your project.
+                      </h6>
+                    </div>
+                    <p className=" mb-5 text-center text-md-start">
                       My available slot is <u>limited</u> every month to ensure my Highest-Quality
                       so you will get none but the best experience ever to achieve your goals faster
                       and easier.
                     </p>
-                    <div className="button-container text-center">
+                    <div className="button-container text-center text-md-start">
                       <button
-                        className="btn btn-primary btn-lg shadow-lg border-3 fw-bold p-3 px-5 text-uppercase fs-3"
+                        className="btn btn-primary btn-lg shadow-lg border-3 fw-bold text-uppercase"
                         onClick={() => setState({ isOpen: true })}>
-                        Claim Your Free Strategy Call
+                        ✅ Claim Your Free Strategy Call
                       </button>
                     </div>
                   </div>
@@ -552,6 +660,21 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <footer id="footer" className="py-3 bg-dark bg-gradient">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <div className="text-center copyright">
+                  <p className="mb-0 small d-flex align-items-center justify-content-center text-light">
+                    <span>
+                      &copy;2012-{new Date().getFullYear()} <strong>EH Marketing</strong>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
